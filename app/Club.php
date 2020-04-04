@@ -13,4 +13,9 @@ class Club extends Model
     public $incrementing = false;
     protected $keyType = 'string';
     public static $clubReportList = ['ERRORTYPE'=>"CLUB REPORT\r\n"];
+
+    //merge code 18-20
+    public function member(){
+        return $this->hasMany('App\Club');
+    }
 }

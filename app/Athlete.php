@@ -12,4 +12,13 @@ class Athlete extends Model
     public $timestamps = false;
     public $incrementing = true;
     public static $athleteReportList = ['ERRORTYPE'=>"ATHLETE REPORT;\r\n"];
+
+    //merge code 16 - 23
+    public function getAthlete(){
+        return $this->hasMany('App\Athlete');
+    }
+
+    public function PostAthlete(){
+
+    }
 }
